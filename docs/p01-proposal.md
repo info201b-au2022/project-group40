@@ -63,6 +63,5 @@ This project investigates how different factors such as screen time and exercise
 - Wahlstrom, Kyla L. “Later Start Time for Teens Improves Grades, Mood, and Safety.” The Phi Delta Kappan, vol. 98, no. 4, 2016, pp. 8–14. JSTOR, http://www.jstor.org/stable/24893397. Accessed 31 Oct. 2022.
 
 
-=======
 This project investigates how different factors such as screen time and exercise can affect individuals' quality of sleep. Though this project was geared towards an age group for 18-35 year-olds, this data can help inform all ages. Data from this project can be taken and positively implemented into the lives of all ages. We want this project to reach students and young adults who do not have a healthy sleeping schedule. We hope that proof from the database will enlighten individuals about how important sleep can be and what they can do to have a better night's rest.
 >>>>>>> 868121d5acb1408739369531df4b6fd45b5b04e8
