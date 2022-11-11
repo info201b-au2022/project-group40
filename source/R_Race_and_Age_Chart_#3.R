@@ -11,11 +11,9 @@ both_data <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project
 
 # Removes the month column from the dataset, which only has unknown values
 both_data <- subset(both_data, select=-c(Month))
-  
-View(both_data)
 
 # Creates a stacked bar chart comparing race groups and age groups to COVID-19 Deaths
-ggplot(both_data, aes(fill=Race.and.Hispanic.Origin.Group, 
+bar_chart <- ggplot(both_data, aes(fill=Race.and.Hispanic.Origin.Group, 
                       y=COVID.19.Deaths, 
                       # Establishes an order for the race groups
                       x=factor(Age.Group, 

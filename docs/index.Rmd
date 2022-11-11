@@ -27,3 +27,8 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r, echo=FALSE}
+source("~/Documents/info201/project-group40/source/R_Race_and_Age_Chart_#3.R")
+bar_chart
+```
+We included a stacked bar chart detailing the racial background of those who died from COVID-19 per age group to identify the intersectionality between many marginalized groups when it comes to COVID-19 related deaths (e.g. how Hispanic milennials compare to the Black elderly population). By creating this chart, we can see that the older a person is, the more likely they are to die from COVID-19, and that the proportion of those dying from COVID-19 who are Non-Hispanic White are larger than other groups, likely because they make up a larger population as a whole. However, Hispanic and Non-Hispanic Black individuals tend to die from COVID-19 in larger proportions at slightly younger ages e.g. from 50-64 years, which is an interesting feature to look into and analyze further.
