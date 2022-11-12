@@ -44,7 +44,8 @@ All of our chosen datasets have been taken from the Center for Disease Control a
 	The NCHS collects the data included in each of these datasets by reviewing death certificate submissions. When death certificates are created they are submitted to the National Vital Statistics System, a system within the NCHS, which tabulates data from the certificate, including cause of death, comorbid conditions, an individual’s race, ethnicity, and the place of death. While the data collected by the NCHS is reliable, there is a 1-2 week delay in the NCHS counts due to delays in the submission system. These delays can come from states reporting deaths at different times, waiting for death-related test results, and in-person processing for Covid-19 deaths, as opposed to an automatic processing system. NCHS data also reports on provisional deaths only, and therefore may differ from data reported by other media sources.
 	The CDC is regarded as a trustworthy and reliable scientific organization. The CDC uses peer review systems to verify collected data and scientific reports, and requires that all reports specify the procedures, methods, and errors that are involved in their data collection system.
 
-![Covid Table](https://github.com/info201b-au2022/project-group40/blob/main/sleep_table.png)
+![Covid Table](https://github.com/info201b-au2022/project-group40/blob/58b340a3fb81f654bf1f2e77cd15ae409fe3c70e/sleep_table.png)
+
 
 ## Limitations
 We might need to address that even if one is a part of these factors in the dataset, that does not mean that they have to panic. The goal of this project is to spread awareness and knowledge. Resulting in the possibility of changing one's mindset on the pandemic. And also a possibility of changing their lifestyle in order to protect themselves and those that they love. Our project has the goal of reaching those who don't know that they might have a higher possibility of being affected by Covid-19.
