@@ -1,11 +1,11 @@
 # R Source First Chart
 
-covid_race <- read.csv("race.csv")
+covid_race <- read.csv("../source/race.csv", stringsAsFactors = FALSE)
 library(ggplot2)
 library(tidyverse)
 library(plotly)
 
-Race <- read.csv("race.csv", stringsAsFactors = FALSE)
+Race <- read.csv("../source/race.csv", stringsAsFactors = FALSE)
 race_data <-Race %>%
   rename(Covid_Deaths=COVID.19.Deaths) %>%
   rename(Black = Non.Hispanic.Black) %>%
@@ -39,7 +39,7 @@ PIE <- Race_Filter %>%
 
 Pie_Chart_Covid_Deaths <- plot_ly(PIE, labels = ~Race, values = ~Covid_Deaths, type = 'pie')
 Pie_Chart_Covid_Deaths <- Pie_Chart_Covid_Deaths %>%
-  layout(title = 'Covid Deaths For each Race',
+  layout(title = 'Covid Deaths For Each Race',
          xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
          yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
 
