@@ -18,7 +18,7 @@ race_and_age <- read.csv("https://raw.githubusercontent.com/info201b-au2022/proj
 race_filtered <- race_data %>%
   filter(Indicator == "Distribution of COVID-19 deaths (%)") %>%
   select(Data.as.of, Indicator, Non.Hispanic.White, Non.Hispanic.Black, Non.Hispanic.American.Indian.or.Alaska.Native, Non.Hispanic.Asian, Non.Hispanic.Native.Hawaiian.or.Other.Pacific.Islander, Hispanic) %>%
-  summarise_at(vars(Non.Hispanic.White:Hispanic), mean, na.rm = TRUE) 
+  summarise_at(vars(Non.Hispanic.White:Hispanic), mean, na.rm = TRUE)
 # Rename Columns
 new_race_filtered <- race_filtered %>%
   rename("Non-Hispanic White" = "Non.Hispanic.White") %>%
@@ -26,12 +26,12 @@ new_race_filtered <- race_filtered %>%
   rename("Non-Hispanic American Indian or Alaska Native" = "Non.Hispanic.American.Indian.or.Alaska.Native") %>%
   rename("Non-Hispanic Asian" = "Non.Hispanic.Asian") %>%
   rename("Non-Hispanic Native Hawaiian or Other Pacific Islander" = "Non.Hispanic.Native.Hawaiian.or.Other.Pacific.Islander")
-# Reorganize the Dataframe 
+# Reorganize the Dataframe
 race_percentages <- gather(
   new_race_filtered,
-  key = Race.and.Hispanic.Origin.Group, 
+  key = Race.and.Hispanic.Origin.Group,
   value = Percent_of_Covid_Deaths_by_Race
-  )
+)
 
 #
 # Grouping for Age Data
@@ -42,7 +42,7 @@ age_filtered <- age_data %>%
   select(Age.Group, COVID.19.Deaths, Total.Deaths) %>%
   mutate(Percent_Covid_Deaths_by_Age = (COVID.19.Deaths / Total.Deaths))
 # Filter out overlapping age groups
-age_percentages <- age_filtered[-c(1,2,4,5,6,8,10,12,14),]
+age_percentages <- age_filtered[-c(1, 2, 4, 5, 6, 8, 10, 12, 14), ]
 
 #
 # Filtered Race and Age Data
