@@ -1,11 +1,11 @@
 # R Source First Chart
 
-covid_race <- read.csv("../source/race.csv", stringsAsFactors = FALSE)
+covid_race <- read.csv("../data/race.csv", stringsAsFactors = FALSE)
 library(ggplot2)
 library(tidyverse)
 library(plotly)
 
-Race <- read.csv("../source/race.csv", stringsAsFactors = FALSE)
+Race <- read.csv("../data/race.csv", stringsAsFactors = FALSE)
 race_data <-Race %>%
   rename(Covid_Deaths=COVID.19.Deaths) %>%
   rename(Black = Non.Hispanic.Black) %>%

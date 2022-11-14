@@ -12,22 +12,19 @@ knitr::opts_chunk$set(echo = TRUE)
 Hillary Chen (chenhil1@uw.edu), Emma Hong (emmah36@uw.edu), Julia Kharchenko (juliak24@uw.edu) , Truc Quynh Nguyen (TQ) (truc1976@uw.edu) 
 ( Write Intro )
 
-```{r cars}
-
-```
-
 ## Aggregate Table
 ```{r, echo=FALSE,warning=FALSE,echo=FALSE,message=FALSE}
-source("../source/R_Source_Summary_Info_Table.R")
-View(summary_table)
-```
+ library(knitr)
+ source("../source/R_Source_Summary_Info_Table.R")
+ kable(summary_table, "simple")
+``` 
 
 ## Chart 1: Race and Age
 ```{r, echo=FALSE,warning=FALSE,echo=FALSE,message=FALSE}
-source("../source/R_Race_and_Age_Chart_#3.R")
-bar_chart
-```
-
+ source("../source/R_Race_and_Age_Chart_#3.R")
+ bar_chart
+``` 
+<br/>
 We included a stacked bar chart detailing the racial background of those who died from COVID-19 per age group to identify the intersectionality between many marginalized groups when it comes to COVID-19 related deaths (e.g. how Hispanic milennials compare to the Black elderly population). By creating this chart, we can see that the older a person is, the more likely they are to die from COVID-19, and that the proportion of those dying from COVID-19 who are Non-Hispanic White are larger than other groups, likely because they make up a larger population as a whole. However, Hispanic and Non-Hispanic Black individuals tend to die from COVID-19 in larger proportions at slightly younger ages e.g. from 50-64 years, which is an interesting feature to look into and analyze further.
 
 ## Chart 2: Race
@@ -39,7 +36,8 @@ We made a pie chart in order to see how different races has been affected by COV
 
 ## Chart 3: Age
 ```{r, echo=FALSE,warning=FALSE,echo=FALSE,message=FALSE}
-source("~/info201/project/project-group40/source/R_Age_Chart_#2.R")
-bar
+ source("../source/R_Age_Chart_#2.R")
+ bar
 ```
+<br/>
 We included a standard bar chart to examine the age groups of individuals who died from COVID-19. In looking at this chart, we can understand that older age groups, specifically between 74-85 years old and 85 years or older, were much more susceptible to COVID-19, and likewise more likely to die from the virus. In opposition, younger age groups were less impacted by the virus, with adolescents and children in particular having almost no deaths in comparison to the older age groups.

@@ -8,7 +8,7 @@ library("ggplot2")
 library("dplyr")
 
 # Gets age data 
-age_data <- read.csv("age.csv")
+age_data <- read.csv("../data/age.csv")
 
 # Filters age data by Age Group and Covid Deaths
 filtered <- age_data %>%
