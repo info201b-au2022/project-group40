@@ -39,6 +39,6 @@ We made a pie chart in order to see how different races has been affected by COV
 
 ## Chart 3: Age
 ```{r, echo=FALSE,warning=FALSE,echo=FALSE,message=FALSE}
-source("../source/R_Age_Chart_#2.R")
+source("~/info201/project/project-group40/source/R_Age_Chart_#2.R")
 bar
 ```
