@@ -29,12 +29,10 @@ Race_Filter <- race_data %>%
   )  
 
 
-
 PIE <- Race_Filter %>%
   select(Covid_Deaths, Black, Non_Hispanic_Indian_Native, Asian, Hawaiian_Pacific_Islander, White) %>%
   gather(key = Race, value = Covid_Deaths) %>%
   group_by(Race, Covid_Deaths)
-
 
 
 Pie_Chart_Covid_Deaths <- plot_ly(PIE, labels = ~Race, values = ~Covid_Deaths, type = 'pie')
