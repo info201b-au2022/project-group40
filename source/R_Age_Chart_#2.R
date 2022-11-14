@@ -12,6 +12,7 @@ age_data <- read.csv("age.csv")
 
 # Filters age data by Age Group and Covid Deaths
 filtered <- age_data %>%
+  filter(State == "United States", Sex == "All Sexes", Group == "By Total") %>%
   select(Age.Group, COVID.19.Deaths) %>%
   group_by(Age.Group) %>%
   summarize(COVID.19.Deaths = sum(COVID.19.Deaths, na.rm = TRUE))
@@ -29,8 +30,8 @@ ggplot(data = new) +
     y = COVID.19.Deaths)) +
   # Changes the Y-axis labels
   scale_y_continuous(
-    breaks = c(0, 500000, 1000000, 1500000, 2000000, 2500000, 3000000, 3500000),
-    labels = c("0","500,000", "1,000,000", "1,500,000", "2,000,000", "2,500,000", "3,000,000", "3,500,000")
+    breaks = c(0, 50000, 100000, 150000, 200000, 250000, 300000),
+    labels = c("0","50,000", "100,000", "150,000", "200,000", "250,000", "300,000")
   )+
   # Labels the chart data
   labs(
