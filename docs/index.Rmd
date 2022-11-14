@@ -36,4 +36,4 @@ We included a stacked bar chart detailing the racial background of those who die
 source("../source/R_Race_Pie_Chart_#1.R")
 Pie_Chart_Covid_Deaths
 ```
-We made a pie chart in order to see how different races has been affected by COVID-19. By the results of this visual, we were able to find out that Non-Hispanic White group made up 84.7% of this pie chart. This means that they were the most affected by COVID-19 versus other races. By making a pie chart, we were visually able to see the data as a fractional part of a whole which can be a straight forward and effect communication tool for even an uniformed reader. 
+We made a pie chart in order to see how different races has been affected by COVID-19. By the results of this visual, we were able to find out that Non-Hispanic White group made up 84.7% of this pie chart. This means that they were the most affected by COVID-19 versus other races. By making a pie chart, we were visually able to see the data as a fractional part of a whole which can be a straight forward and effect communication tool for even an uninformed reader. 
