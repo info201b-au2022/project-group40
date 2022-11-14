@@ -1,7 +1,7 @@
 # R Source Second Chart
 
 # Install Packages
-install.packages("ggplot2")
+# install.packages("ggplot2")
 library("tidyverse")
 library("RcppRoll")
 library("ggplot2")
@@ -21,7 +21,7 @@ filtered <- age_data %>%
 new <- filtered[-c(1,4,6,8,11,16),]
 
 # Creates a bar chart based off the filtered data chart
-ggplot(data = new) + 
+bar <- ggplot(data = new) + 
   geom_col(mapping = aes(
     # Orders the X-axis labels in ascending order
     x = factor(Age.Group, 
