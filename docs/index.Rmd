@@ -9,26 +9,31 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Hillary Chen (chenhil1@uw.edu), Emma Hong (emmah36@uw.edu), Julia Kharchenko (juliak24@uw.edu) , Truc Quynh Nguyen (TQ) (truc1976@uw.edu) 
+( Write Intro )
 
 ```{r cars}
-summary(cars)
+
 ```
 
 ## Including Plots
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r pressure, echo=FALSE,echo=FALSE,message=FALSE}
+
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-```{r, echo=FALSE}
-source("~/Documents/info201/project-group40/source/R_Race_and_Age_Chart_#3.R")
+```{r, echo=FALSE,warning=FALSE,echo=FALSE,message=FALSE}
+source("../source/R_Race_and_Age_Chart_#3.R")
 bar_chart
 ```
+
 We included a stacked bar chart detailing the racial background of those who died from COVID-19 per age group to identify the intersectionality between many marginalized groups when it comes to COVID-19 related deaths (e.g. how Hispanic milennials compare to the Black elderly population). By creating this chart, we can see that the older a person is, the more likely they are to die from COVID-19, and that the proportion of those dying from COVID-19 who are Non-Hispanic White are larger than other groups, likely because they make up a larger population as a whole. However, Hispanic and Non-Hispanic Black individuals tend to die from COVID-19 in larger proportions at slightly younger ages e.g. from 50-64 years, which is an interesting feature to look into and analyze further.
+
+```{r, echo=FALSE,warning=FALSE,echo=FALSE,message=FALSE}
+source("../source/R_Race_Pie_Chart_#1.R")
+Pie_Chart_Covid_Deaths
+```
+We made a pie chart in order to see how different races has been affected by COVID-19. By the results of this visual, we were able to find out that Non-Hispanic White group made up 84.7% of this pie chart. This means that they were the most affected by COVID-19 versus other races. By making a pie chart, we were visually able to see the data as a fractional part of a whole which can be a straight forward and effect communication tool for even an uninformed reader. 
