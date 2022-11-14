@@ -42,3 +42,4 @@ We made a pie chart in order to see how different races has been affected by COV
 source("~/info201/project/project-group40/source/R_Age_Chart_#2.R")
 bar
 ```
+We included a standard bar chart to examine the age groups of individuals who died from COVID-19. In looking at this chart, we can understand that older age groups, specifically between 74-85 years old and 85 years or older, were much more susceptible to COVID-19, and likewise more likely to die from the virus. In opposition, younger age groups were less impacted by the virus, with adolescents and children in particular having almost no deaths in comparison to the older age groups.
