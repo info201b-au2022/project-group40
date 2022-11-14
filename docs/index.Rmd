@@ -21,6 +21,7 @@ Hillary Chen (chenhil1@uw.edu), Emma Hong (emmah36@uw.edu), Julia Kharchenko (ju
 source("../source/R_Source_Summary_Info_Table.R")
 View(summary_table)
 ```
+In order to display the most important aspects of our data, we created an aggregated table of information that can be used to answer our initial research questions. This chart includes the two key variables we studied for this project - Age Group and Race - and how each group has been impacted by Covid. By filterting through our Age dataset, we calculated the amount of Covid Deaths and the percentage of deaths due to Covid for each selected age group. Likewise, we calculated the amount of Covid deaths and percentage of deaths due to Covid for each selected race by filtering through our Race dataset. In looking at this table, it can be easily observed that older age groups had greater amounts of Covid deaths, and that Non-Hispanic White individuals had the most amount of Covid deaths for any racial group. 
 
 ## Chart 1: Race and Age
 ```{r, echo=FALSE,warning=FALSE,echo=FALSE,message=FALSE}
