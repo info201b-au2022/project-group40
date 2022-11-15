@@ -9,7 +9,7 @@ library("dplyr")
 # All Datasets
 race_data <- read.csv("../data/race.csv")
 age_data <- read.csv("../data/age.csv")
-race_and_age <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-group40/main/source/race_and_age.csv")
+race_and_age <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-group40/main/data/race_and_age.csv")
 
 #
 # Grouping for Race Data
