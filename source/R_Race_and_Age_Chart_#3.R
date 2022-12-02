@@ -5,9 +5,12 @@ library("tidyverse")
 library("RcppRoll")
 library("ggplot2")
 library("dplyr")
+library("plotly")
+library(ggiraph)
 
 # Gets race and age data related to COVID-19
 both_data <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-group40/main/data/race_and_age.csv")
+#both_data = ddply(both_data, .(Race.and.Hispanic.Origin.Group), summarize, Freq = sum(Freq), Group = "A")
 
 # Removes the month column from the dataset, which only has unknown values
 both_data <- subset(both_data, select = -c(Month))
@@ -24,13 +27,29 @@ bar_chart <- ggplot(both_data, aes(
     )
   )
 )) +
-  geom_bar(position = "stack", stat = "identity") +
+  geom_bar_interactive(position = "stack", stat = "identity") +
   # Ensures the labels do not conflict with each other
-  scale_x_discrete(guide = guide_axis(n.dodge = 3)) +
+  scale_x_discrete(guide = guide_axis(n.dodge = 5)) +
   # Creates labels for the data
   labs(
     x = "Age Group",
     y = "COVID-19 Deaths",
     fill = "Racial Background",
     title = "COVID-19 Deaths Across Various Racial/Age Groupings"
+  )
+
+# Makes an interactive barchart where users can click on different racial groups and analyze
+#   COVID-19 death discrepancies within them
+interactive_barchart <- plot_ly(
+  data = both_data,
+  x = ~Age.Group,
+  y = ~COVID.19.Deaths,
+  color = ~Race.and.Hispanic.Origin.Group,
+  type = "bar"
+) %>% 
+  layout(barmode = "stack",
+         x = "Age Group",
+         y = "COVID-19 Deaths",
+         title = "COVID-19 Deaths Across Various Racial/Age Groupings",
+         caption = "Click on different races/origin groups to analyze the discrepancies between COVID-19 deaths across age groups."
   )
