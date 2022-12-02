@@ -1,5 +1,5 @@
 # **Investigating The Impact of Covid-19 on Individuals of Particular Race and Age Groups**
-Hillary Chen (chenhil1@uw.edu) | Emma Hong (emmah36@uw.edu) | Julia Kharchenko (juliak24@uw.edu) | Truc Quynh Nguyen (TQ) (truc1976@uw.edu)
+Hillary Chen (chenhil1@uw.edu) | Emma Hong (emmah36@uw.edu) | Julia Kharchenko (juliak24@uw.edu) | Truc Quynh (TQ) Nguyen (truc1976@uw.edu)
 
 _Autumn 2022_ <br/>
 _INFO-201: Technical Foundations of Informatics - The Information School - University of Washington_ <br/>
