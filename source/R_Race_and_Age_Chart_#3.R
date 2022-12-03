@@ -10,7 +10,6 @@ library(ggiraph)
 
 # Gets race and age data related to COVID-19
 both_data <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-group40/main/data/race_and_age.csv")
-#both_data = ddply(both_data, .(Race.and.Hispanic.Origin.Group), summarize, Freq = sum(Freq), Group = "A")
 
 # Removes the month column from the dataset, which only has unknown values
 both_data <- subset(both_data, select = -c(Month))
