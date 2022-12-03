@@ -73,25 +73,21 @@ ui <- fluidPage(
                  p("Click on different races/origin groups to analyze the discrepancies between COVID-19 deaths across age groups."),
                  p("From this chart, it is evident that COVID-19 deaths increase as age increases with all age groups. However, an interesting observation is that there is a larger proportion of Black citizens in the age group of 50-74 years who died as a result of COVID-19 than for older age groups, a trend similar for Hispanic citizens."),
                  p("This is an interesting observation to note and may point to racial inequities within the American healthcare system, or other societal factors that may lead to these disparities.")
-                 
                ),
-               mainPanel(plotlyOutput("race_age_chart"))),
-             tabPanel("Summary", id="summary",
-                      h1("Summary"),
-                      textOutput("summary_text_header"),
-                      tags$ol(
-                        tags$li("The older a person is, the more likely they are to die from COVID-19, specifically between the groups 74-85 years old and 85 years or older"),
-                        tags$li("The racial group \"Non-Hispanic White\" was most affected by COVID-19, likely because they make up a portion of the population"),
-                        tags$li("\"Hispanic\" and \"Non-Hispanic Black\" individuals tended to die from COVID-19 in larger proportions at slightly younger ages, e.g. from 50-64 years"),
-                        img(src = "race_age.png", height = "33%", width = "33%"),
-                        img(src = "race.png", height = "33%", width = "33%"),
-                        img(src = "age.png", height = "33%", width = "33%")
-                      )
-             ), 
-             tabPanel("Report",
-                      includeMarkdown("../docs/p01-proposal.md"),
-                      
-             )
+               mainPanel(plotlyOutput(outputId = "race_age_chart")))),
+    tabPanel("Summary", id="summary",
+             h1("Summary"),
+             textOutput("summary_text_header"),
+             tags$ol(
+               tags$li("The older a person is, the more likely they are to die from COVID-19, specifically between the groups 74-85 years old and 85 years or older"),
+               tags$li("The racial group \"Non-Hispanic White\" was most affected by COVID-19, likely because they make up a portion of the population"),
+               tags$li("\"Hispanic\" and \"Non-Hispanic Black\" individuals tended to die from COVID-19 in larger proportions at slightly younger ages, e.g. from 50-64 years"),
+               img(src = "race_age.png", height = "33%", width = "33%"),
+               img(src = "race.png", height = "33%", width = "33%"),
+               img(src = "age.png", height = "33%", width = "33%")
+               )
+    ), 
+    tabPanel("Report",
+             includeMarkdown("../docs/p01-proposal.md"),
     )
-  )
 )

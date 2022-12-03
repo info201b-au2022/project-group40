@@ -33,6 +33,6 @@ server <- function(input, output) {
   })
   
   output$summary_text_header <- renderText({
-    "After examining the data, we found that:"
+    "After examining the data, we found that: "
   })
 }
