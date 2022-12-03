@@ -35,11 +35,9 @@ ui <- fluidPage(
            h1("Race and COVID-19 Deaths Pie Chart")), 
   tabPanel("Chart 2: Age",
            h1("Age and COVID-19 Deaths Bar Chart")), 
-  tabPanel("Chart 3: Race & Age",
+  tabPanel("Chart 3: Race & Age", id="race_and_age",
+           titlePanel("Race, Age, and COVID-19 Deaths"),
            h1("Race, Age, and COVID-19 Deaths Stacked Bar Chart"),
-           p("Click on different races/origin groups to analyze the discrepancies between COVID-19 deaths across age groups."),
-           p("From this chart, it is evident that COVID-19 deaths increase as age increases with all age groups. However, an interesting observation is that there is a larger proportion of Black citizens in the age group of 50-74 years who died as a result of COVID-19 than for older age groups, a trend similar for Hispanic citizens."),
-           p("This is an interesting observation to note and may point to racial inequities within the American healthcare system, or other societal factors that may lead to these disparities."),
            sidebarLayout(
              sidebarPanel(
                selectInput(
@@ -54,7 +52,10 @@ ui <- fluidPage(
                    "Hispanic" = "Hispanic"
                  ),
                  selected = "Unknown"
-               )
+               ),
+               p("Click on different races/origin groups to analyze the discrepancies between COVID-19 deaths across age groups."),
+               p("From this chart, it is evident that COVID-19 deaths increase as age increases with all age groups. However, an interesting observation is that there is a larger proportion of Black citizens in the age group of 50-74 years who died as a result of COVID-19 than for older age groups, a trend similar for Hispanic citizens."),
+               p("This is an interesting observation to note and may point to racial inequities within the American healthcare system, or other societal factors that may lead to these disparities."),
              )
            ),
            mainPanel(plotlyOutput("race_age_chart"))),
