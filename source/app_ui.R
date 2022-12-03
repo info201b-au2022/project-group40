@@ -37,7 +37,27 @@ ui <- fluidPage(
            h1("Age and COVID-19 Deaths Bar Chart")), 
   tabPanel("Chart 3: Race & Age",
            h1("Race, Age, and COVID-19 Deaths Stacked Bar Chart"),
-           plotlyOutput("race_age_chart")),
+           p("Click on different races/origin groups to analyze the discrepancies between COVID-19 deaths across age groups."),
+           p("From this chart, it is evident that COVID-19 deaths increase as age increases with all age groups. However, an interesting observation is that there is a larger proportion of Black citizens in the age group of 50-74 years who died as a result of COVID-19 than for older age groups, a trend similar for Hispanic citizens."),
+           p("This is an interesting observation to note and may point to racial inequities within the American healthcare system, or other societal factors that may lead to these disparities."),
+           sidebarLayout(
+             sidebarPanel(
+               selectInput(
+                 label= "Racial/Ethnic Group",
+                 choices = list(
+                   "Unknown" = "Unknown",
+                   "White (Non-Hispanic)" = "Non-Hispanic White",
+                   "Native Hawaiian or Other Pacific Islander (Non-Hispanic)" = "Non-Hispanic Native Hawaiian or Other Pacific Islander",
+                   "Black (Non-Hispanic)" = "Non-Hispanic Black",
+                   "Asian (Non-Hispanic)" = "Non-Hispanic Asian",
+                   "American Indian or Alaska Native (Non-Hispanic)" = "Non-Hispanic American Indian or Alaska Native",
+                   "Hispanic" = "Hispanic"
+                 ),
+                 selected = "Unknown"
+               )
+             )
+           ),
+           mainPanel(plotlyOutput("race_age_chart"))),
   tabPanel("Summary",
            h1("Summary"),
            textOutput("summary_text_header"),

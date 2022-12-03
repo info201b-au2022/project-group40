@@ -51,7 +51,6 @@ interactive_barchart <- renderPlotly({
   layout(barmode = "stack",
          x = "Age Group",
          y = "COVID-19 Deaths",
-         title = "COVID-19 Deaths Across Various Racial/Age Groupings",
-         caption = "Click on different races/origin groups to analyze the discrepancies between COVID-19 deaths across age groups."
+         title = "COVID-19 Deaths Across Various Racial/Age Groupings"
   )
 })
