@@ -3,7 +3,7 @@ Hillary Chen (chenhil1@uw.edu) | Emma Hong (emmah36@uw.edu) | Julia Kharchenko (
 
 _Autumn 2022_ <br/>
 _INFO-201: Technical Foundations of Informatics - The Information School - University of Washington_ <br/>
-_Code Name: pillowtalk_
+_Code Name: achoo_
 
 ## Introduction
 
