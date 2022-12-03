@@ -29,7 +29,7 @@ ui <- fluidPage(
              tags$li("How has the Covid-19 pandemic affected individuals belonging to a specific age group?"),
              tags$li("How has the Covid-19 pandemic affected individuals belonging to a specific race?"),
              tags$li("Is there a correlation between race and age in concern to the Covid-19 pandemic, specifically in individuals who have been disproportionately affected by the virus?")),
-           img(src = "../source/www/WFMY Age and Race Among COVID-19 800w.png", align = "center")
+           img(src = "WFMY Age and Race Among COVID-19 800w.png", height = "50%", width = "50%")
            ),
   tabPanel("Chart 1: Race",
            h1("Race and COVID-19 Deaths Pie Chart")), 
@@ -44,7 +44,10 @@ ui <- fluidPage(
            tags$ol(
              tags$li("The older a person is, the more likely they are to die from COVID-19, specifically between the groups 74-85 years old and 85 years or older"),
              tags$li("The racial group \"Non-Hispanic White\" was most affected by COVID-19, likely because they make up a portion of the population"),
-             tags$li("\"Hispanic\" and \"Non-Hispanic Black\" individuals tended to die from COVID-19 in larger proportions at slightly younger ages, e.g. from 50-64 years")
+             tags$li("\"Hispanic\" and \"Non-Hispanic Black\" individuals tended to die from COVID-19 in larger proportions at slightly younger ages, e.g. from 50-64 years"),
+             img(src = "race_age.png", height = "33%", width = "33%"),
+             img(src = "race.png", height = "33%", width = "33%"),
+             img(src = "age.png", height = "33%", width = "33%")
            )
            ),
   tabPanel("Report",
