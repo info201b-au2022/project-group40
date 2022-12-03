@@ -2,8 +2,6 @@
 
 covid_race <- read.csv("../data/race.csv", stringsAsFactors = FALSE)
 library(ggplot2)
-library(tidyverse)
-library(plotly)
 
 Race <- read.csv("../data/race.csv", stringsAsFactors = FALSE)
 race_data <- Race %>%

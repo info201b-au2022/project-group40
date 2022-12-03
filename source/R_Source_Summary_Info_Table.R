@@ -1,9 +1,7 @@
 # R Source File Summary Information Table
 
 # Install Packages
-library("tidyverse")
 library("RcppRoll")
-library("ggplot2")
 library("dplyr")
 
 # All Datasets
@@ -15,7 +13,7 @@ race_and_age <- read.csv("https://raw.githubusercontent.com/info201b-au2022/proj
 # Grouping for Race Data
 #
 # Filter Race_Data dataframe for percentages
-race_filtered <- race_data %>%
+race_filtered <- race_data %>% 
   filter(Indicator == "Distribution of COVID-19 deaths (%)") %>%
   select(Data.as.of, Indicator, Non.Hispanic.White, Non.Hispanic.Black, Non.Hispanic.American.Indian.or.Alaska.Native, Non.Hispanic.Asian, Non.Hispanic.Native.Hawaiian.or.Other.Pacific.Islander, Hispanic) %>%
   summarise_at(vars(Non.Hispanic.White:Hispanic), mean, na.rm = TRUE)

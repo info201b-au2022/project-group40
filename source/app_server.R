@@ -1,6 +1,10 @@
 # server
 
+
+
 library(shiny)
+
+
 
 # Source files
 source("R_Race_and_Age_Chart_#3.R")
@@ -9,7 +13,9 @@ source("R_Race_Pie_Chart_#1.R")
 source("R_Source_Summary_Info.R")
 source("R_Source_Summary_Info_Table.R")
 
-# Define server 
+
+
+# Define server
 server <- function(input, output) {
   
   output$intro_text_1 <- renderText({
@@ -22,8 +28,11 @@ server <- function(input, output) {
   
   output$race_age_chart <- interactive_barchart
   
+  output$PIE_CHART <- renderPlotly({
+    return(Pie_Chart_Covid_Deaths)
+  })
+  
   output$summary_text_header <- renderText({
     "After examining the data, we found that:"
   })
 }
-
