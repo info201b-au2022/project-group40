@@ -1,3 +1,4 @@
+
 # ui
 
 
@@ -53,7 +54,6 @@ ui <- fluidPage(
     tabPanel("Chart 2: Age",
              h1("Age and COVID-19 Deaths Bar Chart")),
     tabPanel("Chart 3: Race & Age", id="race_and_age",
-             titlePanel("Race, Age, and COVID-19 Deaths"),
              h1("Race, Age, and COVID-19 Deaths Stacked Bar Chart"),
              sidebarLayout(
                sidebarPanel(
@@ -87,9 +87,10 @@ ui <- fluidPage(
                         img(src = "race.png", height = "33%", width = "33%"),
                         img(src = "age.png", height = "33%", width = "33%")
                       )
-             ),
+             ), 
              tabPanel("Report",
-                      includeMarkdown("../docs/p01-proposal.md")
+                      includeMarkdown("../docs/p01-proposal.md"),
+                      
              )
     )
   )
