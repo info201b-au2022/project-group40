@@ -38,7 +38,7 @@ ui <- fluidPage(
                tags$li("Is there a correlation between race and age in concern to the Covid-19 pandemic, specifically in individuals who have been disproportionately affected by the virus?")),
              img(src = "WFMY Age and Race Among COVID-19 800w.png", height = "50%", width = "50%")
     ),
-    tabPanel("Chart 1: Race",
+    tabPanel("Chart 1: Race", id="race",
              h1("Race and COVID-19 Deaths Pie Chart"),
              sidebarLayout(
                sidebarPanel(
@@ -51,7 +51,7 @@ ui <- fluidPage(
              )
              
     ),
-    tabPanel("Chart 2: Age",
+    tabPanel("Chart 2: Age", id="age",
              h1("Age and COVID-19 Deaths Bar Chart")),
     tabPanel("Chart 3: Race & Age", id="race_and_age",
              h1("Race, Age, and COVID-19 Deaths Stacked Bar Chart"),
@@ -76,7 +76,7 @@ ui <- fluidPage(
                  
                ),
                mainPanel(plotlyOutput("race_age_chart"))),
-             tabPanel("Summary",
+             tabPanel("Summary", id="summary",
                       h1("Summary"),
                       textOutput("summary_text_header"),
                       tags$ol(
