@@ -39,17 +39,18 @@ bar_chart <- ggplot(both_data, aes(
 
 # Makes an interactive barchart where users can click on different racial groups and analyze
 #   COVID-19 death discrepancies within them
-interactive_barchart <- renderPlotly({
-  plot_ly(
-  data = both_data,
+interactive_barchart <- function(df, yvar) {
+  p <- plot_ly(
+    data = df,
   x = ~Age.Group,
   y = ~COVID.19.Deaths,
-  color = ~Race.and.Hispanic.Origin.Group,
+  fill = ~yvar,
   type = "bar"
 ) %>% 
-  layout(barmode = "stack",
+  layout(#barmode = "stack",
          x = "Age Group",
          y = "COVID-19 Deaths",
          title = "COVID-19 Deaths Across Various Racial/Age Groupings"
   )
-})
+  return(p)
+}

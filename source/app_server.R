@@ -13,7 +13,11 @@ source("R_Race_Pie_Chart_#1.R")
 source("R_Source_Summary_Info.R")
 source("R_Source_Summary_Info_Table.R")
 
+# Gets race and age data related to COVID-19
+both_data <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-group40/main/data/race_and_age.csv")
 
+# Removes the month column from the dataset, which only has unknown values
+both_data <- subset(both_data, select = -c(Month))
 
 # Define server
 server <- function(input, output) {
@@ -26,7 +30,11 @@ server <- function(input, output) {
     "Our sources include data presenting COVID-19 deaths across various races and ages. The datasets record daily observances, spanning from 2020 to yesterday, across as many as 10 age groups, eight racial groups, and their corresponding COVID-19 deaths. In this project, we use this data set to examine the relationship between race, age, and deaths using a sample from the United States."
   })
   
-  output$race_age_chart <- interactive_barchart
+  output$race_age_chart <- renderPlotly({
+    race_age_df <- both_data %>%
+      filter(Race.and.Hispanic.Origin.Group == input$race_age)
+    return(interactive_barchart(race_age_df, input$race_age))
+  })
   
   output$PIE_CHART <- renderPlotly({
     return(Pie_Chart_Covid_Deaths)

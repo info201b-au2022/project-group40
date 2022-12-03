@@ -58,6 +58,7 @@ ui <- fluidPage(
              sidebarLayout(
                sidebarPanel(
                  selectInput(
+                   "race_age",
                    label= "Racial/Ethnic Group",
                    choices = list(
                      "Unknown" = "Unknown",
@@ -74,7 +75,7 @@ ui <- fluidPage(
                  p("From this chart, it is evident that COVID-19 deaths increase as age increases with all age groups. However, an interesting observation is that there is a larger proportion of Black citizens in the age group of 50-74 years who died as a result of COVID-19 than for older age groups, a trend similar for Hispanic citizens."),
                  p("This is an interesting observation to note and may point to racial inequities within the American healthcare system, or other societal factors that may lead to these disparities.")
                ),
-               mainPanel(plotlyOutput(outputId = "race_age_chart")))),
+               mainPanel(plotlyOutput("race_age_chart")))),
     tabPanel("Summary", id="summary",
              h1("Summary"),
              textOutput("summary_text_header"),
@@ -90,4 +91,5 @@ ui <- fluidPage(
     tabPanel("Report",
              includeMarkdown("../docs/p01-proposal.md"),
     )
+)
 )
