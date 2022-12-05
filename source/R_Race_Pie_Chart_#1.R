@@ -2,7 +2,7 @@
 
 covid_race <- read.csv("../data/race.csv", stringsAsFactors = FALSE)
 library(ggplot2)
-source("app_ui.R")
+
 
 Race <- read.csv("../data/race.csv", stringsAsFactors = FALSE)
 race_data <- Race %>%
@@ -31,7 +31,7 @@ Race_Filter <- race_data %>%
 PIE <- Race_Filter %>%
   select(Covid_Deaths, Black, Non_Hispanic_Indian_Native, Asian, Hawaiian_Pacific_Islander, White) %>%
   gather(key = Race, value = Covid_Deaths) %>% 
-  filter(Race %in% input$Race_Pie_Chart) %>% 
+  filter(Race%in% input$Race_Pie_Chart) %>% 
   group_by(Race, Covid_Deaths)
 
 
