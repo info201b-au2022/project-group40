@@ -59,7 +59,7 @@ ui <- fluidPage(
                ),
                  
                
-               # sidebarPanel( " This is a pie chart that shows how differnt races has been affected the COVID-19. As can be seen, the race that been affected the most was the White race. To further analyze, place mouse cursor over the slices to see exactly how many indvudals have been affected within each race. "
+               # sidebarPanel( " This is a pie chart that shows how different races has been affected the COVID-19. As can be seen, the race that been affected the most was the White race. To further analyze, place mouse cursor over the slices to see exactly how many indvudals have been affected within each race. "
                #   
                ),
                
@@ -111,3 +111,4 @@ ui <- fluidPage(
     )
 )
 )
+
