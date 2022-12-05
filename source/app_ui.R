@@ -38,11 +38,29 @@ ui <- fluidPage(
                tags$li("Is there a correlation between race and age in concern to the Covid-19 pandemic, specifically in individuals who have been disproportionately affected by the virus?")),
              img(src = "WFMY Age and Race Among COVID-19 800w.png", height = "50%", width = "50%")
     ),
-    tabPanel("Chart 1: Race", id="race",
+    tabPanel("Chart 1: Race", id="Race_Pie_Chart",
              h1("Race and COVID-19 Deaths Pie Chart"),
              sidebarLayout(
-               sidebarPanel( " This is a pie chart that shows how differnt races has been affected the COVID-19. As can be seen, the race that been affected the most was the White race. To further analyze, place mouse cursor over the slices to see exactly how many indvudals have been affected within each race. "
+               sidebarPanel(   
+                 selectInput(
+                 "Filter Races",
+                 label= "Racial/Ethnic Group",
+                 choices = list(
+                   "Unknown" = "Unknown",
+                   "White (Non-Hispanic)" = "Non-Hispanic White",
+                   "Native Hawaiian or Other Pacific Islander (Non-Hispanic)" = "Non-Hispanic Native Hawaiian or Other Pacific Islander",
+                   "Black (Non-Hispanic)" = "Non-Hispanic Black",
+                   "Asian (Non-Hispanic)" = "Non-Hispanic Asian",
+                   "American Indian or Alaska Native (Non-Hispanic)" = "Non-Hispanic American Indian or Alaska Native",
+                   "Hispanic" = "Hispanic"
+                 ),
+                 selected = "Unknown",  
+                 multiple = TRUE 
+               ),
                  
+               
+               # sidebarPanel( " This is a pie chart that shows how differnt races has been affected the COVID-19. As can be seen, the race that been affected the most was the White race. To further analyze, place mouse cursor over the slices to see exactly how many indvudals have been affected within each race. "
+               #   
                ),
                
                mainPanel(
