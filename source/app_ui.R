@@ -44,11 +44,9 @@ chart_1 <- tabPanel(
         selected = "White",
         multiple = TRUE)
     ),
-<<<<<<< HEAD
     mainPanel(
       plotlyOutput(outputId = "PIE_CHART"),
       p("This Pie Chart shows how differnt cases has been affected by COVID-19. As can be seen, the White race has been affected the most comparied to other races.To further analyze the data, select the race from the drop down menu and/or place mouse cursor over pie slices.")
-=======
     tabPanel("Chart 2: Age", id="age",
              h1("Age and COVID-19 Deaths Bar Chart")),
              sidebarLayout(
@@ -97,7 +95,6 @@ chart_1 <- tabPanel(
     ), 
     tabPanel("Report",
              includeMarkdown("../docs/p01-proposal.md"),
->>>>>>> 18793da2da66c8cbeaabd493ba6b1eedf7430c21
     )
     
   )
@@ -116,7 +113,7 @@ chart_2 <- tabPanel(h4("Chart 2: Age"), id = "age",
                       )
                     )
 )
-#
+
 chart_3 <- tabPanel(h4("Chart 3: Race & Age"), id = "race_and_age",
                     h1("Race, Age, and COVID-19 Deaths Stacked Bar Chart"),
                     sidebarLayout(
@@ -142,8 +139,8 @@ chart_3 <- tabPanel(h4("Chart 3: Race & Age"), id = "race_and_age",
                         p("This is an interesting observation to note and may point to racial inequities within the American healthcare system, or other societal factors that may lead to these disparities.")
                       ),
                       mainPanel(plotlyOutput("race_age_chart"))))
-#
-chart_4 <- tabPanel(h4("Summary"), id = "summary",
+
+summary <- tabPanel(h4("Summary"), id = "summary",
                     h1("Summary"),
                     textOutput("summary_text_header"),
                     tags$ol(
@@ -166,7 +163,7 @@ ui <- navbarPage(
   chart_1,
   chart_2,
   chart_3,
-  chart_4,
-  tabPanel(h4("Report"), includeMarkdown("../docs/p01-proposal.md")
+  summary,
+  tabPanel("Report", includeMarkdown("../docs/p01-proposal.md")
   )
 )
