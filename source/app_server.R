@@ -36,6 +36,21 @@ server <- function(input, output) {
     return(interactive_barchart(race_age_df, input$race_age))
   })
   
+  output$age <- renderPlotly({
+    chart <- ggplot(final_df) + 
+      geom_col(mapping = aes_string(
+        x = input$x_var,
+        y = input$y_var),
+        fill = "black") +
+      scale_x_discrete(guide = guide_axis(n.dodge = 3)) +
+      labs(
+        x = "Age Groups",
+        y = input$y_var,
+        title = "Deaths by Covid-19 and Other Viruses by Different Age Groups (2020-2022)"
+      )
+    return(chart)
+  })
+  
   output$PIE_CHART <- renderPlotly({
     return(Pie_Chart_Covid_Deaths)
   })

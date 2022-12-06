@@ -53,6 +53,15 @@ ui <- fluidPage(
     ),
     tabPanel("Chart 2: Age", id="age",
              h1("Age and COVID-19 Deaths Bar Chart")),
+             sidebarLayout(
+               sidebarPanel(
+                 age_x_input,
+                 age_y_input,
+               ),
+               mainPanel(
+                plotlyOutput("age")
+               )
+             ),
     tabPanel("Chart 3: Race & Age", id="race_and_age",
              h1("Race, Age, and COVID-19 Deaths Stacked Bar Chart"),
              sidebarLayout(
