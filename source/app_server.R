@@ -1,12 +1,4 @@
-# server
-
-
-
 library(shiny)
-
-
-
-# Source files
 source("R_Race_and_Age_Chart_#3.R")
 source("R_Age_Chart_#2.R")
 source("R_Race_Pie_Chart_#1.R")
@@ -35,8 +27,38 @@ server <- function(input, output) {
       filter(Race.and.Hispanic.Origin.Group == input$race_age)
     return(interactive_barchart(race_age_df, input$race_age))
   })
+
+  output$age <- renderPlotly({
+    chart <- ggplot(final_df) + 
+      geom_col(mapping = aes_string(
+        x = input$x_var,
+        y = input$y_var),
+        fill = "black") +
+      scale_x_discrete(guide = guide_axis(n.dodge = 3)) +
+      labs(
+        x = "Age Groups",
+        y = input$y_var,
+        title = "Deaths by Covid-19 and Other Viruses by Different Age Groups (2020-2022)"
+      )
+    return(chart)
+  })
   
   output$PIE_CHART <- renderPlotly({
+    PIE <- Race_Filter %>%
+      select(Covid_Deaths, Black, Non_Hispanic_Indian_Native, Asian, Hawaiian_Pacific_Islander, White) %>%
+      gather(key = Race, value = Covid_Deaths) %>%
+      group_by(Race, Covid_Deaths)
+    
+    
+    PIE <- PIE %>% filter(Race %in% input$Race_Pie_Chart)
+    Pie_Chart_Covid_Deaths <- plot_ly(PIE, labels = ~Race, values = ~Covid_Deaths, type = "pie")
+    Pie_Chart_Covid_Deaths <- Pie_Chart_Covid_Deaths %>%
+      layout(
+        title = "Covid Deaths For Each Race",
+        xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+        yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE)
+      )
+    
     return(Pie_Chart_Covid_Deaths)
   })
   
@@ -46,3 +68,4 @@ server <- function(input, output) {
     "After examining the data, we found that: "
   })
 }
+
