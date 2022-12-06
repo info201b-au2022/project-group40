@@ -41,8 +41,6 @@ Race_Filter <- race_data %>%
 
 
 
-
-
 Pie_Chart_Covid_Deaths <- plot_ly(PIE, labels = ~Race, values = ~Covid_Deaths, type = "pie")
 Pie_Chart_Covid_Deaths <- Pie_Chart_Covid_Deaths %>%
   layout(
