@@ -27,7 +27,7 @@ Intro_Page <- tabPanel(
 chart_1 <- tabPanel(
   h4("Chart 1: Pie Chart"),
   h1("Race, Age, and COVID-19 Deaths Pie Chart By Race"),
-  p("REPLACE LATER WITH INFORMATION"),
+  p("This Pie Chart shows how differnt cases has been affected by COVID-19. As can be analyzed, the white race has been most affected by COVID-19.To compare how each race has been affected, selected from the drop down menu below.To see statistics, place mouse cursor over pie slices."),
   sidebarLayout(
     sidebarPanel(
       selectInput(
@@ -46,7 +46,6 @@ chart_1 <- tabPanel(
     ),
     mainPanel(
       plotlyOutput(outputId = "PIE_CHART"),
-      p("This Pie Chart shows how differnt cases has been affected by COVID-19. As can be seen, the White race has been affected the most comparied to other races.To further analyze the data, select the race from the drop down menu and/or place mouse cursor over pie slices.")
     )
   )
 )

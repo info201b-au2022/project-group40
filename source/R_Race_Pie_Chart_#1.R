@@ -20,6 +20,11 @@ race_data <- Race %>%
 
 
 
+PIE <- Race_Filter %>%
+  select(Covid_Deaths, Black, Non_Hispanic_Indian_Native, Asian, Hawaiian_Pacific_Islander, White) %>%
+  gather(key = Race, value = Covid_Deaths) %>%
+  group_by(Race, Covid_Deaths)
+
 
 
 Race_Filter <- race_data %>%
