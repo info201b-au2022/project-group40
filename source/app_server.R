@@ -55,6 +55,8 @@ server <- function(input, output) {
     return(Pie_Chart_Covid_Deaths)
   })
   
+  
+  
   output$summary_text_header <- renderText({
     "After examining the data, we found that: "
   })
