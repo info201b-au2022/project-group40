@@ -1,15 +1,7 @@
 # R Source First Chart
 
-
-
 covid_race <- read.csv("../data/race.csv", stringsAsFactors = FALSE)
 library(ggplot2)
-library(dplyr)
-library(tidyverse)
-library(plotly)
-
-
-
 
 Race <- read.csv("../data/race.csv", stringsAsFactors = FALSE)
 race_data <- Race %>%
@@ -20,13 +12,6 @@ race_data <- Race %>%
   rename(Hawaiian_Pacific_Islander = Non.Hispanic.Native.Hawaiian.or.Other.Pacific.Islander) %>%
   rename(White = Non.Hispanic.White) %>%
   drop_na()
-
-
-
-PIE <- Race_Filter %>%
-  select(Covid_Deaths, Black, Non_Hispanic_Indian_Native, Asian, Hawaiian_Pacific_Islander, White) %>%
-  gather(key = Race, value = Covid_Deaths) %>%
-  group_by(Race, Covid_Deaths)
 
 
 
@@ -42,6 +27,10 @@ Race_Filter <- race_data %>%
     White = sum(White), .groups = "drop"
   )
 
+PIE <- Race_Filter %>%
+  select(Covid_Deaths, Black, Non_Hispanic_Indian_Native, Asian, Hawaiian_Pacific_Islander, White) %>%
+  gather(key = Race, value = Covid_Deaths) %>%
+  group_by(Race, Covid_Deaths)
 
 
 Pie_Chart_Covid_Deaths <- plot_ly(PIE, labels = ~Race, values = ~Covid_Deaths, type = "pie")
