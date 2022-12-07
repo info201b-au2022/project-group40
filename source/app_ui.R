@@ -59,15 +59,15 @@ chart_2 <- tabPanel(
       age_y_input,
       ),
     mainPanel(
-      plotlyOutput("age")
-    ),
-    p("This bar chart shows how different age groups have been affected by the Covid-19 virus during the years of 2020 to 2022. 
+      plotlyOutput("age"),
+      p("This bar chart shows how different age groups have been affected by the Covid-19 virus during the years of 2020 to 2022. 
       By including a Y-Variable that changes between different death counts, including the total death count in the United States 
       and the death counts by influenza and pnuemonia in those same years, one can make direct comparisons between the impacts of 
       Covid versus other deadly viruses. As shown in the chart, across all viruses there is an increase in death totals as the age group
       increases. The chart also shows that while influenza death totals are significantly lower than that of Covid-19, the range of 
       pneumonia death totals are similar to the Covid-19 death totals. However, across all charts individuals of older ages are
       shown to be disproportionally affected by the virus.")
+    )
   )
 )
 
