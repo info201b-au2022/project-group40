@@ -1,9 +1,9 @@
 # R Source First Chart
 
-covid_race <- read.csv("../data/race.csv", stringsAsFactors = FALSE)
+covid_race <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-group40/main/data/race.csv", stringsAsFactors = FALSE)
 library(ggplot2)
 
-Race <- read.csv("../data/race.csv", stringsAsFactors = FALSE)
+Race <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-group40/main/data/race.csv", stringsAsFactors = FALSE)
 race_data <- Race %>%
   rename(Covid_Deaths = COVID.19.Deaths) %>%
   rename(Black = Non.Hispanic.Black) %>%
