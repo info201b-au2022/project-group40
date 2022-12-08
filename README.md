@@ -1,9 +1,9 @@
 # Final Project Repository
 **INFO-201: _Foundational Skills For Data Science_ (Autumn 2022)**
 
-Link to Shiny app: https://juliakharchenko.shinyapps.io/project-group40/
+Link to Shiny app: https://chenhil1.shinyapps.io/project-group40/
 
-*P01: Project Proposal*: [Project Proposal Title - Edit Me!](./docs/p01-proposal.md) 
+*P01: Project Proposal*: [Project Proposal Title - Edit Me!](./docs/p01-proposal.md)
 
 
 |Project Directories | Brief Description|
@@ -15,7 +15,7 @@ Link to Shiny app: https://juliakharchenko.shinyapps.io/project-group40/
 | .gitignore | This  file is important. It tells git to ignore all files that are listed therein. Ignoring "non-useful" files will make it *much* easier to work togther in your team. See Freeman and Ross (2019, section 3.6) for details.  |
 | LICENSE | This is a straigtforward software license that basically says "You own the copyright of your code.  Others can use your code, so long as they cite that they are doing so." You should put your names into the LICENSE file. If you would like to use a different license, that would be fine! |
 
-### Developer notes: 
-* You will use this repository for developing your Final Project 
+### Developer notes:
+* You will use this repository for developing your Final Project
 * You will customized and add to this basic directory structure over the course of your project - edit the above table has needed
 * When ready, delete these developer notes
