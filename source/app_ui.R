@@ -25,7 +25,7 @@ Intro_Page <- tabPanel(
 )
 
 chart_1 <- tabPanel(
-  "Chart 1: Pie Chart",
+  "Chart 1: Race",
   h1("Race, Age, and COVID-19 Deaths Pie Chart By Race"),
   sidebarLayout(
     sidebarPanel(
