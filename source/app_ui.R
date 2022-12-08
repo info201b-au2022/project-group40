@@ -12,7 +12,7 @@ source("R_Source_Summary_Info.R")
 source("R_Source_Summary_Info_Table.R")
 
 Intro_Page <- tabPanel(
-  h4("Introduction"),
+  "Introduction",
   h1("Introduction"),
   textOutput("intro_text_1"),
   textOutput("intro_text_2"),
@@ -25,9 +25,8 @@ Intro_Page <- tabPanel(
 )
 
 chart_1 <- tabPanel(
-  h4("Chart 1: Pie Chart"),
+  "Chart 1: Pie Chart",
   h1("Race, Age, and COVID-19 Deaths Pie Chart By Race"),
-  p("This Pie Chart shows how differnt cases has been affected by COVID-19. As can be analyzed, the white race has been most affected by COVID-19.To compare how each race has been affected, selected from the drop down menu below.To see statistics, place mouse cursor over pie slices."),
   sidebarLayout(
     sidebarPanel(
       selectInput(
@@ -42,7 +41,8 @@ chart_1 <- tabPanel(
         ),
         
         selected = "White",
-        multiple = TRUE)
+        multiple = TRUE),
+      p("This Pie Chart shows how differnt cases has been affected by COVID-19. As can be analyzed, the white race has been most affected by COVID-19. To compare how each race has been affected, selected from the drop down menu below. To see statistics, place mouse cursor over pie slices.")
     ),
     mainPanel(
       plotlyOutput(outputId = "PIE_CHART"),
@@ -51,15 +51,12 @@ chart_1 <- tabPanel(
 )
 
 chart_2 <- tabPanel(
-  h4("Chart 2: Age"), id = "age", 
+  "Chart 2: Age", id = "age", 
   h1("Age and COVID-19 Deaths Bar Chart"),
   sidebarLayout(
     sidebarPanel(
       age_x_input,
       age_y_input,
-      ),
-    mainPanel(
-      plotlyOutput("age"),
       p("This bar chart shows how different age groups have been affected by the Covid-19 virus during the years of 2020 to 2022. 
       By including a Y-Variable that changes between different death counts, including the total death count in the United States 
       and the death counts by influenza and pnuemonia in those same years, one can make direct comparisons between the impacts of 
@@ -67,12 +64,15 @@ chart_2 <- tabPanel(
       increases. The chart also shows that while influenza death totals are significantly lower than that of Covid-19, the range of 
       pneumonia death totals are similar to the Covid-19 death totals. However, across all charts individuals of older ages are
       shown to be disproportionally affected by the virus.")
+      ),
+    mainPanel(
+      plotlyOutput("age"),
     )
   )
 )
 
 chart_3 <- tabPanel(
-  h4("Chart 3: Race & Age"), id = "race_and_age",
+  "Chart 3: Race & Age", id = "race_and_age",
   h1("Race, Age, and COVID-19 Deaths Stacked Bar Chart"),
   sidebarLayout(
     sidebarPanel(
@@ -101,7 +101,7 @@ chart_3 <- tabPanel(
 )
 
 summary <- tabPanel(
-  h4("Summary"), id = "summary",
+  "Summary", id = "summary",
   h1("Summary"),
   textOutput("summary_text_header"),
   tags$ol(
