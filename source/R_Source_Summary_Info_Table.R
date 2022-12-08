@@ -84,4 +84,3 @@ df2 <- df2 %>%
 
 # Join dataframes
 summary_table <- left_join(df1, df2)
-View(summary_table)
