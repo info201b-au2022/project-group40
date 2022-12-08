@@ -1,6 +1,6 @@
 # R Source Code: Summary Information Calculations
 library(dplyr)
-source("../source/R_Source_Summary_Info_Table.R")
+source("R_Source_Summary_Info_Table.R")
   
 summary_info <- list()
 

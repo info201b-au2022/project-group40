@@ -5,8 +5,8 @@ library("RcppRoll")
 library("dplyr")
 
 # All Datasets
-race_data <- read.csv("../data/race.csv")
-age_data <- read.csv("../data/age.csv")
+race_data <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-group40/main/data/race.csv")
+age_data <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-group40/main/data/age.csv")
 race_and_age <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-group40/main/data/race_and_age.csv")
 
 #

@@ -117,7 +117,7 @@ summary <- tabPanel(
 # Define UI
 ui <- navbarPage(
   theme = shinytheme("sandstone"),
-  includeCSS("../source/www/styles.css"),
+  includeCSS("www/styles.css"),
   title = "Race, Age, and COVID-19 Deaths",
   windowTitle = "Race, Age, and COVID-19 Deaths",
   Intro_Page,
@@ -125,6 +125,6 @@ ui <- navbarPage(
   chart_2,
   chart_3,
   summary,
-  tabPanel("Report", includeMarkdown("../docs/p01-proposal.md")
+  tabPanel("Report", includeMarkdown("https://raw.githubusercontent.com/info201b-au2022/project-group40/main/docs/p01-proposal.md")
   )
 )
